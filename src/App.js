@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
-import SearchAppBar from "../src/components/Layout/header";
-import SearchResults from "./components/searchresults";
-import MyList from "./components/mylist";
+import SearchAppBar from "./Components/Layout/header";
+import SearchResults from "./Components/searchresults";
+import MyList from "./Components/mylist";
 import axios from "axios";
-import MyListProvider from "./components/mylist/mylistprovider";
+import MyListProvider from "./Components/mylist/mylistprovider";
 
 
 class App extends Component {

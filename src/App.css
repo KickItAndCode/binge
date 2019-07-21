@@ -65,3 +65,75 @@
   font-size: 22px;
   color: teal;
 }
+
+
+
+/*Login*/
+
+.login_wrapper {
+  /* width: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, 20%); */
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.4);
+  height: 50%;
+} 
+
+
+.login_wrapper form {
+  width: 100%;
+}
+
+
+.form_button{
+  height: 50px;
+  width: 150px;
+  background-image: linear-gradient(to right, #24C6DC 0%, #514A9D 51%, #24C6DC 100%) ; 
+  color: #fff; 
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.form_button:hover {
+  background-position: right center;
+}
+
+.input_text{
+  margin-bottom: 10px;
+}
+
+/* input {
+  padding: 0px;
+  position: relative;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.87);
+  cursor: auto;
+  font: inherit;
+  opacity: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 14px;
+
+} */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
