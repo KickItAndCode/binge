@@ -1,15 +1,14 @@
-import React, { Component } from "react";
-import "./App.css";
-import SearchAppBar from "./Components/Layout/header";
-import SearchResults from "./Components/searchresults";
-import MyList from "./Components/mylist";
-import axios from "axios";
-import MyListProvider from "./Components/mylist/mylistprovider";
-
+import React, { Component } from 'react';
+import './App.css';
+import SearchAppBar from './Components/Layout/header';
+import SearchResults from './Components/searchresults';
+import MyList from './Components/mylist';
+import axios from 'axios';
+import MyListProvider from './Components/mylist/mylistprovider';
 
 class App extends Component {
   state = {
-    searchfor: "",
+    searchfor: '',
     res: [],
   };
 
@@ -18,21 +17,15 @@ class App extends Component {
   };
 
   handleKeyDown = e => {
-    if (e.key === "Enter") {
-      let apiKey = "7162df2fd005697749ada799f6d12790";
+    if (e.key === 'Enter') {
+      let apiKey = '7162df2fd005697749ada799f6d12790';
       this.setState({ searchfor: e.target.value });
 
-      axios
-        .get(
-          `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${
-            e.target.value
-          }`
-        )
-        .then(res => {
-          this.setState({
-            res: res.data
-          });
+      axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${e.target.value}`).then(res => {
+        this.setState({
+          res: res.data,
         });
+      });
     }
   };
 
