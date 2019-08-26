@@ -6,12 +6,12 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Routes from './routes';
 
 const Index = props => {
-  return (
-    <Router>
-      <Routes {...props} />
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes {...props} />
+        </Router>
+    );
 };
 firebase.auth().onAuthStateChanged(user => {
-  ReactDOM.render(<Index user={user} />, document.getElementById('root'));
+    ReactDOM.render(<Index user={user} />, document.getElementById('root'));
 });

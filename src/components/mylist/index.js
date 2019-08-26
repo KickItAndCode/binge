@@ -1,29 +1,21 @@
-import React, { useContext, useState, useEffect } from "react";
-import ResultCard from "../searchresults/resultcard";
-import { MyListContext } from "./mylistprovider";
+import React, { useContext, useState, useEffect } from 'react';
+import ResultCard from '../searchresults/resultcard';
+import { MyListContext } from './mylistprovider';
+import '../css/mylist.css';
+const myList = props => {
+    const { myList } = useContext(MyListContext);
 
-const MyList = props => {
+    return (
+        <>
+            {myList.length > 0 && <div className="mylist_header">Currently binging {myList.length} show/s </div>}
 
-  
-  const { mylist } = useContext(MyListContext);
-
-  const [list, setloist] = useState(mylist)
-useEffect(() => {
-  console.log("loaded");
-  
-}, [list])
-
-  console.log("My List:" +list)
- return (
-      <>
-      <h1>Hello</h1>
-      <div>
-        {list.map((item, index) => (
-          <ResultCard key={index} item={item} />
-        ))}
-      </div>
-      </>
- )
+            <div>
+                {myList.map((item, index) => (
+                    <ResultCard key={index} item={item} />
+                ))}
+            </div>
+        </>
+    );
 };
 
-export default MyList;
+export default myList;
